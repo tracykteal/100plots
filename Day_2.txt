@@ -1,0 +1,73 @@
+Since I want the IPython Notebook to be rendered on the web site and 
+not just be a link, I first tried converting it to HTML with 
+nbconvert.  However, since I want everything to be on github anyway, 
+Adina Howe recommended that I just use the nbviewer software through
+github.  She actually had a dream that she told me to do that, so 
+who I am to argue.  
+
+So, the first thing I need to do is create a git repository and commit
+the files there.  I thought I'd just walk through that process for
+those who are interested.
+
+First, create a github account at http://github.com
+
+Then click 'Create a Repository'
+
+My github account is tracykteal and I'm calling the repository '100plots'
+
+Now I need to my local computer and initialize my repository there
+
+I'm on Mac OSX, so I open a terminal (actually I already have one open, 
+because I mainly like to work at the terminal).  Then I navigate to the
+place where I have my files 
+
+cd ~tracyt/Documents/Projects/100plots
+
+I'll create a README.md file, because it's good practice to have a file
+like this that tells you what's in the repository
+
+I mainly use emacs as my command line text editor, so 
+
+emacs README.md
+
+and add some text 
+
+This repository contains the text files and IPython Notebook files for the 
+100plots project.
+
+Author: Tracy K. Teal
+
+Now I'll initialize the repository and add this file
+(After you create the repository on github, it basically tells you how
+to do this part)
+
+# Initialize the repository
+git init
+
+# Add the README file to the repository. This is so git knows
+# about the file.  It will ignore files in the directory that
+# you haven't told it about
+git add README.md
+
+# Commit the changes locally
+git commit -m "Added README.md file"
+
+# So far the changes are just on my local computer. If I want to push 
+# those changes to github I need to tell it where to put them and then
+# push them.  This is something different between git and version
+# control systems like svn.  You can have local and remote repositories 
+# with git.
+
+git remote add origin https://github.com/tracykteal/100plots.git
+
+Now if you go look at your github account, you'll see the README file.
+
+I also already have the Day 1 IPython Notebook file, so I'm going to add that.
+
+git add Day_1.ipynb
+git commit -m "Adding Day 1 IPython Notebook"
+git push origin master
+
+
+
+
