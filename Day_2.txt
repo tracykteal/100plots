@@ -1,3 +1,12 @@
+<html>
+<head><title>Day 2</title></head>
+
+<body>
+
+<h3>Day 2 - Setting up rendering of IPython Notebooks on the web with github</h3>
+
+<p>
+<pre>
 Since I want the IPython Notebook to be rendered on the web site and 
 not just be a link, I first tried converting it to HTML with 
 nbconvert.  However, since I want everything to be on github anyway, 
@@ -50,6 +59,15 @@ git init
 git add README.md
 
 # Commit the changes locally
+# The -m "message" part is to create your commit message
+# All the docs tell you to make this a useful commit message and they're
+# right.  You can search these messages, or it just makes it a lot 
+# easier to figure out what you or someone else was thinking at a 
+# particular time. There's some joke about wanting to talk to yourself
+# 6 months ago, but that you're not responding to email.  Version control
+# isn't just for people who work with other people.  It's for you
+# to keep track of what you're doing.  Really, you won't remember.
+
 git commit -m "Added README.md file"
 
 # So far the changes are just on my local computer. If I want to push 
@@ -67,6 +85,36 @@ I also already have the Day 1 IPython Notebook file, so I'm going to add that.
 git add Day_1.ipynb
 git commit -m "Adding Day 1 IPython Notebook"
 git push origin master
+
+Now I can get a git URL to post on the web site that should render the 
+IPython Notebook on the website.  Let's give it a try.
+
+I click on the Day_1.ipynb file in github.  Then, Adina gave me the tip to 
+click on 'Raw' and use that URL.  If you click on those different tabs, you 
+see that they give different URLs.
+
+Got the RAW version:  
+https://raw.github.com/tracykteal/100plots/master/Day_1.ipynb
+
+Now I can go post this in the IPython Notebook Viewer
+It's a web site where you can post a notebook link and it renders it 
+as HTML
+
+http://nbviewer.ipython.org
+
+When I post in the github, link I get 
+
+http://nbviewer.ipython.org/urls/raw.github.com/tracykteal/100plots/master/Day_1.ipynb
+
+I can just post this link on the web site, or I could view the source code,
+then put that source code on the web site.  I can also print the 
+IPython Notebooks to pdf and link in the pdf.  I'll try a few different
+ways and see what I like.  For now, I'll just have the link to the viewer
+and the notebook on github.
+
+
+</pre>
+</body>
 
 
 
